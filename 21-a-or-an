@@ -1,0 +1,7 @@
+public String aOrAn(String word) {
+    List<String> listVowels = new List<String>{'a','e','i','o','u'};
+    if(listVowels.contains(word.subString(0))){
+        return 'An ' + word;
+    }
+    return 'A ' + word;
+}
