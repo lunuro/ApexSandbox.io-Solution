@@ -1,6 +1,6 @@
 public String aOrAn(String word) {
     List<String> listVowels = new List<String>{'a','e','i','o','u'};
-    if(listVowels.contains(word.substring(0))){
+    if(listVowels.contains(word.substring(0,1))){
         return 'an ' + word;
     }
     return 'a ' + word;
