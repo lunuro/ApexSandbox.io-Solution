@@ -1,12 +1,9 @@
 public String whichTwo(Integer a, Integer b, Integer c) {
-    Integer absA = Math.abs(a);
-    Integer absB = Math.abs(b);
-    Integer absC = Math.abs(c);
-    if(absA + absB == absC) 
+    if(a + b == c) 
         return 'c';
-    if(absA + absC == absB)
+    if(a + c == b)
         return 'b';
-    if(absB + absA == absA)
+    if(b + c == a)
         return 'a';
     return '';
 }
