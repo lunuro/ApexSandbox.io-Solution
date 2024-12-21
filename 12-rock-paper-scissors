@@ -6,4 +6,5 @@ public Integer rockPaperScissors(String player1, String player2) {
         'scissors' => 'paper',
         'paper' => 'rock'
     };
-    return mapWinPlay.get(player1) == player2 ? '1' : '2' ;}
+    return mapWinPlay.get(player1).equals(player2) ? 1 : 2;
+}
