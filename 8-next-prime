@@ -1,7 +1,8 @@
 public Integer nextPrime(Integer num) {
-    while(!isPrime){
+    Boolea primRes = false
+    while(!primRes){
         num++;
-        isPrime(num);
+        primRes = isPrime(num);
     }
     return num;
 }
