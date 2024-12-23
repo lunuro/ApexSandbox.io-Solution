@@ -5,5 +5,5 @@ public String changeTimeFormat(String strTime) {
     
     if(intHour > 12)
         return (intHour - 12) + ':' + strMin + ' PM';
-    return srtTime + ' AM';
+    return strTime + ' AM';
 }
