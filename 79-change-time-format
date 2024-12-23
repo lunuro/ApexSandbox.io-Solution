@@ -3,9 +3,8 @@ public String changeTimeFormat(String strTime) {
     if(intHour == 12)
         return strTime + ' PM';
     if(intHour == 0)
-        return  strTime.replaceFirst('00','12') + ' AM';
+        return strTime.replaceFirst('00','12') + ' AM';
     if(intHour > 12)
-        return (intHour - 12).format().leftPad(2,'0') + ':' 
-                + strTime.substringAfter(':') + ' PM';
+        return strTime.replaceFirst(intHour, (intHour - 12).format().leftPad(2,'0')) + ' PM';
     return strTime + ' AM';
 }
