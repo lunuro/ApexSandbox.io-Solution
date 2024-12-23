@@ -3,6 +3,10 @@ public String changeTimeFormat(String strTime) {
     String strMin = strTime.substringAfter(':');
     Integer intHour = Integer.valueOf(strHour);
     
+    if(intHour == 12)
+        return strTime + ' AM';
+    if(intHour == 00)
+        return (intHour + 12) + ':' + strMin + ' PM';
     if(intHour > 12)
         return (intHour - 12) + ':' + strMin + ' PM';
     return strTime + ' AM';
