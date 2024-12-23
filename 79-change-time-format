@@ -1,7 +1,6 @@
 public String changeTimeFormat(String strTime) {
-    String strHour = strTime.substringBefore(':');
     String strMin = strTime.substringAfter(':');
-    Integer intHour = Integer.valueOf(strHour);
+    Integer intHour = Integer.valueOf(strTime.substringBefore(':'));
     
     if(intHour == 12)
         return strTime + ' PM';
