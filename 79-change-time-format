@@ -8,6 +8,6 @@ public String changeTimeFormat(String strTime) {
     if(intHour == 00)
         return (intHour + 12) + ':' + strMin + ' AM';
     if(intHour > 12)
-        return (intHour - 12).leftPad(2,'0') + ':' + strMin + ' PM';
+        return (intHour - 12).format().leftPad(2,'0') + ':' + strMin + ' PM';
     return strTime + ' AM';
 }
