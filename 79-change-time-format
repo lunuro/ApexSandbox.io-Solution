@@ -4,5 +4,5 @@ public String changeTimeFormat(String strTime) {
         return (intHour == 12 ? strTime :
                 strTime.replaceFirst(intHour.format(),
                 (intHour - 12).format().leftPad(2,'0'))) + ' PM';
-    return (intHour == 0 ? strTime.replaceFirst('00','12') : strTime ) + ' AM';
+    return (intHour == 0 ? strTime.replaceFirst('00','12') : strTime) + ' AM';
 }
