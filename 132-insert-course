@@ -1,6 +1,7 @@
 public Id insertCourse(String name, String details, Integer credits) {
-    if(credits == null) 
-    return null;
+    List<Integer> listCreds = new List<Integer>{1,2,3,4};
+    if(!listCreds.contains(credits)) 
+        return null;
     apxio__Course__c cou = new apxio__Course__c();
     cou.Name = name;
     cou.apxio__Course_Details__c = details;
