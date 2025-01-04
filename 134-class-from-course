@@ -6,4 +6,5 @@ public Id classFromCourse(String courseName) {
     cls.apxio__Course__c = cou.Id;
     cls.Name = courseName;
     insert cls;
+    return cls.Id;
 }
