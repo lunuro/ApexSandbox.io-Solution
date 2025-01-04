@@ -1,0 +1,13 @@
+public void enrollStudents(List<String> emails, String className) {
+    List<apxio__Class__c> listCls = [SELECT Id FROM apxio__Class__c WHERE Name = :className];
+    if(listCls.isEmpty())
+        return null;
+    List<apxio__Class_Enrollment__c> listClsEnr = new List <apxio__Class_Enrollment__c>();
+    for(apxio__Student__c stud : [SELECT Id FROM apxio__Student__c WHERE apxio__Email__c IN :emails]){
+        apxio__Class_Enrollment__c clsEnr = new apxio__Class_Enrollment__c ();
+        clsEnr.apxio__Student__c = stud.Id;
+        clsEnr.apxio__Offered_Class__c = listCls[0].Id;
+        listClsEnr.add(clsEnr);
+    }
+    insert listClsEnr;
+}
