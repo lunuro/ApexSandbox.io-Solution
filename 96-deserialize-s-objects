@@ -1,4 +1,5 @@
 public List<Account> getAccountsFromJSONString(String inputJSON){
+    /*
     if(String.isBlank(inputJSON))
         return null;
     List<Object> listObj = (List<Object>) JSON.deserializeUntyped(inputJSON);
@@ -11,4 +12,6 @@ public List<Account> getAccountsFromJSONString(String inputJSON){
         listAcc.add(acc);
     }     
     return listAcc;
+    */
+    return String.isBlank(inputJSON) ? null : (List<Account>)JSON.deserialize (inputJSON,List<Account>.class);
 }
