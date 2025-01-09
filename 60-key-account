@@ -1,10 +1,10 @@
 public Boolean isKeyAccount(Account a) {
-    Map<String,Integer> mapKeyIndRev = new Map<String,Integer>(
+    Map<String,Integer> mapKeyIndRev = new Map<String,Integer>{
         'Banking' => 600000,
         'Technology' => 600000,
         'Retail' => 600000
-    );
-    if((mapKeyIndRev.contains(a?.Industry) && a?.AnnualRevenue >= mapKeyIndRev.get(a.Industry))
+     };
+    if((mapKeyIndRev.containsKey(a?.Industry) && a?.AnnualRevenue >= mapKeyIndRev.get(a.Industry))
         || (a?.Industry != null && a?.AnnualRevenue >= 500000))
         return true;
     return false;
