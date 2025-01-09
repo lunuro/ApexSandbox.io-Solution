@@ -1,0 +1,3 @@
+public void setAccountRating(Account a) {
+    a.Rating = a?.AnnualRevenue <= 100000 ? 'Cold' : a?.AnnualRevenue <= 500000 ? 'Warm' : 'Hot';
+}
