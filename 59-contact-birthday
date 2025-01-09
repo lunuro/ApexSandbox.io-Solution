@@ -1,3 +1,4 @@
 public Boolean isBirthday(Contact c) {
-    return c?.Birthdate.isSameDay(System.today());
+    return c?.Birthdate.day() == System.today().day() 
+            && c?.Birthdate.month() == System.today().month();
 }
