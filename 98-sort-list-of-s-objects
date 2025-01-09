@@ -5,12 +5,10 @@ public List<Account> getAccounts(List<Account> accounts) {
 
 public class RevenueComparator implements Comparator<Account> {
     public Integer compare(Account acc1, Account acc2) {
-        if (acc1?.AnnualRevenue == null && acc2?.AnnualRevenue == null) {
+        if (acc1?.AnnualRevenue == null && acc2?.AnnualRevenue == null)
             return 0;
-        } 
-        if (acc1.AnnualRevenue < acc2.AnnualRevenue) {
+        if (acc1.AnnualRevenue < acc2.AnnualRevenue) 
             return 1;
-        }
         return -1;
     }
 }
