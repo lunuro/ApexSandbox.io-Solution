@@ -1,0 +1,4 @@
+public void escalateIfMeetsCriteria(Case c) {
+    c.IsEscalated = (new List<String>{'Mechanical','Electrical'}.contains(c.Type)) 
+                    && c.Reason == 'Breakdown' && c.Status == 'In Progress';
+}
