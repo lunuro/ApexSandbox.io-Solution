@@ -1,5 +1,5 @@
 public List<Account> getAccounts(List<Account> accounts) {
-    accounts.sort(new RevenueComparator());
+    accounts?.sort(new RevenueComparator());
     return accounts;
 }
 
