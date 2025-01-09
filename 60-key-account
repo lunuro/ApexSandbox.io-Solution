@@ -4,8 +4,6 @@ public Boolean isKeyAccount(Account a) {
         'Technology' => 800000,
         'Retail' => 2000000
      };
-    if(a?.AnnualRevenue >= mapKeyIndRev.get(a.Industry)
-        || (!mapKeyIndRev.containsKey(a?.Industry) && a?.AnnualRevenue >= 500000))
-        return true;
-    return false;
+    return a?.AnnualRevenue >= mapKeyIndRev.get(a.Industry)
+           || (!mapKeyIndRev.containsKey(a?.Industry) && a?.AnnualRevenue >= 500000);
 }
