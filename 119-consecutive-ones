@@ -14,6 +14,8 @@ public Integer maxConsecutiveOnes(Integer[] numbers) {
 */
     String stNums = String.join(numbers,'');
     List<String> listOnes = stNums.split('0');
+    if(listOnes.isEmpty())
+        return 0;
     listOnes.sort();
     return listOnes.get(listOnes.size()-1).length();
 }
