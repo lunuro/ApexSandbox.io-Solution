@@ -4,7 +4,7 @@ public Map<String, List<Case>> casesByType(List<Case> cases) {
         if(mapTypeCases.containsKey(ca.Type)){
                 mapTypeCases.get(ca.Type).add(ca);
         }
-        mapTypeCases.put(ca.Type, new List<Case>(ca));
+        mapTypeCases.put(ca.Type, new List<Case>{ca});
     }
     return mapTypeCases;
 }
