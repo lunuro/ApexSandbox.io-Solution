@@ -1,0 +1,4 @@
+public Integer secondLargest(List<Integer> numbers) {
+    numbers.sort();
+    return numbers.get(numbers.size()-2);
+}
