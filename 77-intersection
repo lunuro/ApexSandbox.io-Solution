@@ -2,7 +2,7 @@ public Set<Integer> setIntersection(Set<Integer> set1, Set<Integer> set2) {
     Set<Integer> setInter = new Set<Integer>();
     for(Integer int1 : set1){
         if(set2.contains(int1))
-            setInter.add(int);
+            setInter.add(int1);
     }
     return setInter;
 }
