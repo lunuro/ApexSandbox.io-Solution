@@ -1,0 +1,11 @@
+public boolean isSorted(List<Integer> numbers) {
+    List<Integer> listNumSorted = new List<Integer>(numbers);
+    listNumSorted.sort();
+    Integer numSize = numbers.size();
+    for(Integer i=0; i < numSize; i++){
+        if(numbers[i] == listNumSorted[i] || numbers[i] == listNumSorted[numSize - i - 1])
+            continue;
+        return false;
+    }
+    return true;
+}
