@@ -3,9 +3,9 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer listEnd = opportunities.size()-1;
     while (listInit <= listEnd) {
       Integer listMid = listInit + (listEnd - listInit) / 2;
-      if (target == opportunities[listMid].Amount) 
+      if (target == opportunities.get(listMid).Amount) 
         return listMid;
-      if (target < opportunities[listMid].Amount) 
+      if (target < opportunities.get(listMid).Amount) 
         listEnd = listMid - 1;
       else 
         listInit = listMid + 1;
