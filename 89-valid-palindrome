@@ -1,0 +1,4 @@
+public Boolean isPalindrome(String str){
+    String strClean = str.toLowerCase().replaceAll('[^0-9.]', '');
+    return strClean == strClean.reverse();
+}
