@@ -1,0 +1,9 @@
+public boolean isAnagram(String s1, String s2) {
+    List<String> listS1 = s1?.split();
+    listS1.sort();
+    String s1Ord = String.join(listS1);
+    List<String> listS2 = s2?.split();
+    listS2.sort();
+    String s2Ord = String.join(listS2);
+    return s1Ord == s2Ord;
+}
