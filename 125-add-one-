@@ -1,0 +1,9 @@
+public void plusOne(List<Integer> numbers) {
+    if(numbers.isEmpty())
+        return;
+    Integer intNum = Integer.valueOf(numbers.toString()) + 1;
+    numbers.clear();
+    for(String stNum : intNum.format().split('')){
+        numbers.add(Integer.valueOf(stNum));
+    }
+}
