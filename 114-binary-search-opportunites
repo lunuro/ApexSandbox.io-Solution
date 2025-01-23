@@ -1,16 +1,14 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
-    Integer listInit = 0
+    Integer listInit = 0;
     Integer listEnd = opportunities.size();
     while (listInit < listEnd) {
       Integer listMid = (listInit + listEnd) / 2;
-      if (target == opportunities.get(listMid)) {
+      if (target == opportunities.get(listMid)) 
         return listMid;
-      }
-      if (target < opportunities.get(listMid)) {
+      if (target < opportunities.get(listMid)) 
         listEnd = listMid - 1;
-      } else {
+      else 
         listInit = listMid + 1;
-      }
     }
     return -1;
 }
