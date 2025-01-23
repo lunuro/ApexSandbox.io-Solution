@@ -1,8 +1,12 @@
 public class LinkedList{
+
     public Node head{ get; set;}
+
     public Node tail{ get; set;}
 
-    public LinkedList{
+    public Integer size{ get; set;}
+
+    public LinkedList(){
         this.head = null;
         this.tail = null;
         this.size = 0;
@@ -29,7 +33,7 @@ public class LinkedList{
         return remove.data;
     }
     public void addToTail(Integer value){
-        Node newNode = new Node(data);
+        Node newNode = new Node(value);
         if (this.head == null) {
             this.head = newNode;
             this.tail = this.head;
@@ -68,4 +72,8 @@ public class LinkedList{
 public class Node{
     Integer data;
     Node next;
+    public Node(Integer data){
+        this.data = data;
+        this.next = null;
+    }
 }
