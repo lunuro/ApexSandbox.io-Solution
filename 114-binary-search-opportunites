@@ -5,7 +5,7 @@ public static Integer search(List<Opportunity> opportunities, Integer target){
       Integer listMid = listInit + (listEnd - listInit) / 2;
       if (target == opportunities.get(listMid).Amount) 
         return listMid;
-      if (target < opportunities.get(listMid).Amount) 
+      else if (target < opportunities.get(listMid).Amount) 
         listEnd = listMid - 1;
       else 
         listInit = listMid + 1;
