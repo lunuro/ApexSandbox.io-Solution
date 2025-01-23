@@ -1,6 +1,6 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
     Integer listInit = 0;
-    Integer listEnd = opportunities.size();
+    Integer listEnd = opportunities.size()-1;
     while (listInit < listEnd) {
       Integer listMid = (listInit + listEnd) / 2;
       if (target == opportunities.get(listMid).Amount) 
