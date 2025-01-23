@@ -1,5 +1,7 @@
 public boolean isAnagram(String s1, String s2) {
-    List<String> listS1 = s1?.split('');
+    if(s1 == null || s2 == null)
+        return false;
+    List<String> listS1 = s1.split('');
     listS1.sort();
     String s1Ord = String.join(listS1,'');
     List<String> listS2 = s2?.split('');
