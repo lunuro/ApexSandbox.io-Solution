@@ -1,9 +1,24 @@
 public void plusOne(List<Integer> numbers) {
     if(numbers.isEmpty())
         return;
-    Integer intNum = Integer.valueOf(String.join(numbers,'')) + 1;
-    numbers.clear();
-    for(String stNum : String.valueOf(intNum).split('')){
-        numbers.add(Integer.valueOf(stNum));
+    Integer numSize = numbers.size()-1;
+    Integer numLast = numbers.get(numSize);
+    if(numLast < 9){
+         numbers.set(numSize, numLast + 1);
+    } else{
+        numbers.set(numSize, 0);
+        while(numSize >= 0){
+            if(numSize == 0){
+                numbers.add(0, 1);
+                return;
+            }
+            numSize--;
+            numLast = numbers.get(numSize);
+             if(numLast < 9){
+         		numbers.set(numSize, numLast + 1);
+                return;
+            } else
+                numbers.set(numSize, 0);
+        }
     }
 }
