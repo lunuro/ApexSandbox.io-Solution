@@ -1,7 +1,16 @@
 public static Integer search(List<Opportunity> opportunities, Integer target){
-    for(Opportunity opp : opportunities){
-        if(opp.Amount == target)
-            return opportunities.indexOf(opp);
+    Integer listInit = 0
+    Integer listEnd = opportunities.size();
+    while (listInit < listEnd) {
+      Integer listMid = (listInit + listEnd) / 2;
+      if (target == opportunities.get(listMid)) {
+        return listMid;
+      }
+      if (target < opportunities.get(listMid)) {
+        listEnd = listMid - 1;
+      } else {
+        listInit = listMid + 1;
+      }
     }
     return -1;
 }
