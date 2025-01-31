@@ -1,12 +1,9 @@
 public Integer maxProfit(List<Integer> prices){
     Integer prof = 0;
-    List<Integer> listPriceOrd = new List<Integer>(prices);
-    listPriceOrd.sort();
-    Integer min = listPriceOrd.get(0);
-    for(Integer i = prices.indexOf(min); i < prices.size(); i++){
-        Integer currInt = prices.get(i);
-        if(currInt > min && prof < (currInt - min))
-            prof = currInt - min;
+    Integer min = prices.get(0);
+    for (Integer price : prices) {
+        prof = Math.max(prof, price - min);
+        min = Math.min(min, price);
     }
     return prof;
 }
