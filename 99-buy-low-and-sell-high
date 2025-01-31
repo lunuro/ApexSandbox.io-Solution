@@ -1,0 +1,12 @@
+public Integer maxProfit(List<Integer> prices){
+    Integer prof = 0;
+    List<Integer> listPriceOrd = new List<Integer>(prices);
+    listPriceOrd.sort();
+    Integer min = listPriceOrd.get(0);
+    for(Integer i = prices.get(min); i < prices.size()-1; i++){
+        Integer currInt = prices.get(i);
+        if(currInt < min && prof < (currInt - min))
+            prof = currInt - min;
+    }
+    return prof;
+}
