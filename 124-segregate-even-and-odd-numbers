@@ -1,0 +1,9 @@
+public static void segregateEvenOdd(List<Integer> numbers){
+    for(Integer i=0; i<numbers.length();i++){
+        Integer currNum = numbers.get(i);
+        if(Math.mod(currNum,2) == 0){
+            numbers.add(0,currNum);
+            numbers.remove(i+1);
+        }
+    }
+}
