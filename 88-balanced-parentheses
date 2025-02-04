@@ -5,11 +5,14 @@ public Boolean isValid(String s){
         '[' => ']'
     };
     List<String> listBracks = s.split('');
-    while(listBracks.size() >= 0){
+    Integer brackSize = listBracks.size();
+    while(brackSize > 0){
         String curBrack = (String) listBracks.remove(0);
         String oppBrack = mapBracks.get(curBrack);
-        if(listBracks.contains(oppBrack))
+        if(listBracks.contains(oppBrack)){
             listBracks.remove(listBracks.indexOf(oppBrack));
+        	brackSize-=2;
+        }
         else
             return false;
     }
