@@ -7,8 +7,9 @@ public Boolean isValid(String s){
     List<String> listBracks = s.split('');
     while(listBracks.size() >= 0){
         String curBrack = (String) listBracks.remove(0);
-        if(listBracks.contains(mapBracks.get(curBrack)))
-            listBracks.remove(mapBracks.get(curBrack));
+        String oppBrack = mapBracks.get(curBrack);
+        if(listBracks.contains(oppBrack))
+            listBracks.remove(listBracks.indexOf(oppBrack));
         else
             return false;
     }
