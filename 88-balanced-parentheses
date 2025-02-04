@@ -1,0 +1,16 @@
+public Boolean isValid(String s){
+    Map<String,String> mapBracks = new Map<String,String>(
+        '(' => ')',
+        '{' => '}',
+        '[' => ']'
+    );
+    List<String> listBracks = s.split('');
+    while(listBracks.size() >= 0){
+        String curBrack = (String) listBracks.remove(0);
+        if(listBracks.contains(mapBracks.get(curBrack)))
+            listBracks.remove(mapBracks.get(curBrack));
+        else
+            return false;
+    }
+    return true;
+}
