@@ -2,7 +2,8 @@ public void defragging(Integer[] memory){
     Integer memSize = memory.size();
     for(Integer i=0; i<memSize ;i++){
         if(memory[i] == -1){
-            memory.add(memory.remove(i),memSize-1);
+            memory.add(-1);
+            memory.remove(i);
         }
     }
 }
